@@ -23,7 +23,7 @@ import java.util.Optional;
 @Controller
 public class HomeController {
 
-    @Autowired
+    @Autowired //auto dependency injection from spring
     private EmployerRepository employerRepository;
     @Autowired
     private SkillRepository skillRepository;
@@ -57,7 +57,7 @@ public class HomeController {
             return "add";
         }
 
-        Optional<Employer> optEmployer = employerRepository.findById(employerId);
+        Optional<Employer> optEmployer = employerRepository.findById(employerId); //in case of null value
         if (optEmployer.isPresent()) {
             Employer employer = (Employer) optEmployer.get();
             newJob.setEmployer(employer);

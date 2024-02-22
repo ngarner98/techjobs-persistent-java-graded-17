@@ -9,7 +9,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 import java.util.Objects;
-@MappedSuperclass //
+@MappedSuperclass //abstract class(common variable parent)
 public abstract class AbstractEntity {
 
     @Id
