@@ -11,3 +11,7 @@ where location = "St. Louis City";
 --Part 3
 drop table job;
 --Part 4
+select * from skill
+inner join job_skills on skill.id = job_skills.skills_id
+order by name asc;
+
